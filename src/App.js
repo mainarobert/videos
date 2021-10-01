@@ -7,13 +7,14 @@ class App extends Component {
     videos: []
   }
 
-  //callled when user submits search form
+  // callled when user submits search form
+  // fetching data is asynchronous we use either promises or asyn await
   onTermSubmit = async term => {
     // Youtube is an instance of axios since its pre-configured in Youtube.js
     // '/search' is the path we want to make get request to
     const response = await Youtube.get('/search', {
       params: {
-        //q is a property based off youtube api doc
+        // q is a property based off youtube api doc
         q: term
       }
     })
