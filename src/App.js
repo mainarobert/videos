@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from './components/Search';
 import Youtube from './api/Youtube';
+import VideoList from './components/VideoList';
 
 class App extends Component {
   state = {
@@ -27,7 +28,7 @@ class App extends Component {
     return (
       <div>
         <Search onFormSubmit= {this.onTermSubmit} />    {/* pass onTermSubmit callback as props */}
-        found {this.state.videos.length} videos
+        <VideoList videos= { this.state.videos }/>
       </div>
     )
   }
