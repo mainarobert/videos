@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-const VideoItem = () => {
+const VideoItem = ({ video }) => {
     return (
         <div>
-            video item
+            <img src={video.snippet.thumbnails.medium.url} alt="thumbnail" />
+            { video.snippet.title }
         </div>
-    )
-}
+    );
+};
 
-export default VideoItem
+export default VideoItem;

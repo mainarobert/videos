@@ -3,7 +3,7 @@ import VideoItem from './VideoItem';
 
 const VideoList = ({ videos }) => {
     const renderedList= videos.map((vid)=> {
-        return <VideoItem />
+        return <VideoItem  video= {vid}/>
     });
 
     return (
